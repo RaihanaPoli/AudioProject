@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu May 11 12:55:21 2017
+# Process ID: 22921
+# Current directory: /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1
+# Command line: vivado -log Audio_wrapper.vdi -applog -messageDb vivado.pb -mode batch -source Audio_wrapper.tcl -notrace
+# Log file: /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.vdi
+# Journal file: /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source Audio_wrapper.tcl -notrace
