@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu May 11 12:49:56 2017
+# Process ID: 22604
+# Current directory: /home/INTRA/esmost/workspace/project/MIX_001/mix_001
+# Command line: wbtcv -mode batch -source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.tmp/mix_ip.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: /home/INTRA/esmost/workspace/project/MIX_001/mix_001/webtalk.log
+# Journal file: /home/INTRA/esmost/workspace/project/MIX_001/mix_001/webtalk.jou
+#-----------------------------------------------------------
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.tmp/mix_ip.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May 11 12:49:56 2017...

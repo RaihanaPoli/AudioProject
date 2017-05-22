@@ -1,0 +1,117 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu May 11 12:43:41 2017
+# Process ID: 22276
+# Current directory: /home/INTRA/esmost/workspace/project/MIX_001/mix_001
+# Command line: vivado
+# Log file: /home/INTRA/esmost/workspace/project/MIX_001/mix_001/vivado.log
+# Journal file: /home/INTRA/esmost/workspace/project/MIX_001/mix_001/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd}
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP /home/INTRA/esmost/workspace/project/MIX_001/ip_repo/Audio_Mixer
+ipx::edit_ip_in_project -upgrade true -name mix_ip -directory /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.tmp /home/INTRA/esmost/workspace/project/MIX_001/ip_repo/Audio_Mixer/component.xml
+ipx::current_core /home/INTRA/esmost/workspace/project/MIX_001/ip_repo/Audio_Mixer/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+set_property  ip_repo_paths  {/home/INTRA/esmost/workspace/project/MIX_001/ip_repo/Audio_Mixer /home/INTRA/esmost/workspace/project/audioip_lab4 /home/INTRA/esmost/workspace/project/repo/FILTER_IIR_1.0 /home/INTRA/esmost/workspace/project/repo/Volume_Pregain_1.0 /home/INTRA/esmost/workspace/project/vivado/ip_repo/myip_1.0 /home/INTRA/esmost/workspace/project/audioip_lab4/zedboard_audio} [current_project]
+update_ip_catalog
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:mixer:1.0 mixer_0
+endgroup
+set_property location {2 717 608} [get_bd_cells mixer_0]
+set_property location {2 1217 618} [get_bd_cells mixer_0]
+delete_bd_objs [get_bd_nets myip_0_Audio_IP_output]
+connect_bd_net [get_bd_pins myip_0/Audio_IP_output] [get_bd_pins mixer_0/audio_channel_a_left_in]
+connect_bd_net [get_bd_pins mixer_0/audio_mixed_a_b_left_out] [get_bd_pins audio_zed_0/hphone_l]
+connect_bd_net [get_bd_pins mixer_0/audio_mixed_a_b_right_out] [get_bd_pins audio_zed_0/hphone_r]
+connect_bd_net [get_bd_pins myip_0/Audio_IP_output] [get_bd_pins mixer_0/audio_channel_a_right_in]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_l] [get_bd_pins mixer_0/audio_channel_b_left_in]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_r] [get_bd_pins mixer_0/audio_channel_b_right_in]
+save_bd_design
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+make_wrapper -files [get_files /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd] -top
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+startgroup
+create_bd_cell -type ip -vlnv tsotnep:userLibrary:FILTER_IIR:1.0 FILTER_IIR_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins FILTER_IIR_0/S00_AXI]
+startgroup
+create_bd_cell -type ip -vlnv tsotnep:userLibrary:Volume_Pregain:1.0 Volume_Pregain_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins Volume_Pregain_0/S00_AXI]
+set_property location {4 1127 392} [get_bd_cells FILTER_IIR_0]
+set_property location {2 678 407} [get_bd_cells Volume_Pregain_0]
+regenerate_bd_layout
+connect_bd_net [get_bd_pins Volume_Pregain_0/OUT_VOLCTRL_L] [get_bd_pins FILTER_IIR_0/AUDIO_IN_L]
+connect_bd_net [get_bd_pins Volume_Pregain_0/OUT_VOLCTRL_R] [get_bd_pins FILTER_IIR_0/AUDIO_IN_R]
+connect_bd_net [get_bd_pins Volume_Pregain_0/IN_SIG_L] [get_bd_pins mixer_0/audio_channel_a_left_in]
+connect_bd_net [get_bd_pins Volume_Pregain_0/IN_SIG_R] [get_bd_pins mixer_0/audio_channel_b_left_in]
+undo
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_r]
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_l]
+delete_bd_objs [get_bd_nets myip_0_Audio_IP_output]
+connect_bd_net [get_bd_pins myip_0/Audio_IP_output] [get_bd_pins Volume_Pregain_0/IN_SIG_L]
+connect_bd_net [get_bd_pins Volume_Pregain_0/IN_SIG_R] [get_bd_pins myip_0/Audio_IP_output]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_l] [get_bd_pins mixer_0/audio_channel_b_left_in]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_r] [get_bd_pins mixer_0/audio_channel_b_right_in]
+connect_bd_net [get_bd_pins FILTER_IIR_0/AUDIO_OUT_L] [get_bd_pins mixer_0/audio_channel_a_left_in]
+connect_bd_net [get_bd_pins FILTER_IIR_0/AUDIO_OUT_R] [get_bd_pins mixer_0/audio_channel_a_right_in]
+startgroup
+create_bd_cell -type ip -vlnv tsotnep:userLibrary:FILTER_IIR:1.0 FILTER_IIR_1
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins FILTER_IIR_1/S00_AXI]
+startgroup
+create_bd_cell -type ip -vlnv tsotnep:userLibrary:Volume_Pregain:1.0 Volume_Pregain_1
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins Volume_Pregain_1/S00_AXI]
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_l]
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_r]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_l] [get_bd_pins Volume_Pregain_1/IN_SIG_L]
+connect_bd_net [get_bd_pins audio_zed_0/line_in_r] [get_bd_pins Volume_Pregain_1/IN_SIG_R]
+connect_bd_net [get_bd_pins Volume_Pregain_1/OUT_VOLCTRL_L] [get_bd_pins FILTER_IIR_1/AUDIO_IN_L]
+connect_bd_net [get_bd_pins Volume_Pregain_1/OUT_VOLCTRL_R] [get_bd_pins FILTER_IIR_1/AUDIO_IN_R]
+connect_bd_net [get_bd_pins FILTER_IIR_1/AUDIO_OUT_L] [get_bd_pins mixer_0/audio_channel_b_left_in]
+connect_bd_net [get_bd_pins FILTER_IIR_1/AUDIO_OUT_R] [get_bd_pins mixer_0/audio_channel_b_right_in]
+validate_bd_design
+connect_bd_net [get_bd_pins FILTER_IIR_1/SAMPLE_TRIG] [get_bd_pins Volume_Pregain_1/OUT_RDY]
+connect_bd_net [get_bd_pins FILTER_IIR_0/SAMPLE_TRIG] [get_bd_pins Volume_Pregain_0/OUT_RDY]
+validate_bd_design
+make_wrapper -files [get_files /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd] -top
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+file copy -force /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
