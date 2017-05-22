@@ -1,0 +1,396 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Thu May  4 09:17:18 2017
+# Process ID: 24938
+# Current directory: /home/INTRA/esmost/workspace/vivado
+# Command line: vivado
+# Log file: /home/INTRA/esmost/workspace/vivado/vivado.log
+# Journal file: /home/INTRA/esmost/workspace/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project project_Audio /home/INTRA/esmost/workspace/vivado/project_Audio -part xc7z020clg484-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+set_property board_part em.avnet.com:zed:part0:1.3 [current_project]
+set_property target_language VHDL [current_project]
+create_peripheral xilinx.com user myip 1.0 -dir /home/INTRA/esmost/workspace/vivado/ip_repo
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core xilinx.com:user:myip:1.0]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core xilinx.com:user:myip:1.0]
+write_peripheral [ipx::find_open_core xilinx.com:user:myip:1.0]
+set_property  ip_repo_paths  /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_myip_v1_0 -directory /home/INTRA/esmost/workspace/vivado/ip_repo /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+add_files -norecurse {/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/audio_testbench.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i2c.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i2s_data_interface.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/clocking.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i3c2.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/adau1761_configuraiton_data.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/ADAU1761_interface.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/adau1761_izedboard.vhd /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/audio_top.vhd}
+update_compile_order -fileset sources_1
+remove_files /home/INTRA/esmost/workspace/zedboard_audio-master/hdl/audio_testbench.vhd
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i2c.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i2s_data_interface.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/clocking.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/i3c2.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/adau1761_configuraiton_data.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/ADAU1761_interface.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/adau1761_izedboard.vhd'.
+WARNING: [IP_Flow 19-3833] Unreferenced file from the top module is not packaged: '/home/INTRA/esmost/workspace/zedboard_audio-master/hdl/audio_top.vhd'.
+set_property core_revision 2 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/ip_repo/edit_myip_v1_0.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 09:25:17 2017...
+update_ip_catalog -rebuild -repo_path /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'
+create_bd_design "Audio"
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+set_property location {0.5 -36 -431} [get_bd_cells myip_0]
+delete_bd_objs [get_bd_cells myip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+delete_bd_objs [get_bd_cells myip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+delete_bd_objs [get_bd_cells myip_0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins myip_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+</myip_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+validate_bd_design
+regenerate_bd_layout
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project/myip_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 09:47:49 2017...
+update_ip_catalog -rebuild -repo_path /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'
+delete_bd_objs [get_bd_intf_nets processing_system7_0_axi_periph_M00_AXI] [get_bd_cells myip_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:myip:1.0 myip_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config {Master "/processing_system7_0/M_AXI_GP0" Clk "Auto" }  [get_bd_intf_pins myip_0/S00_AXI]
+</myip_0/S00_AXI/S00_AXI_reg> is being mapped into </processing_system7_0/Data> at <0x43C00000 [ 64K ]>
+set_property  ip_repo_paths  {/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0 /home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'.
+ipx::infer_core -vendor xilinx.com -library user -taxonomy /UserIP /home/INTRA/esmost/workspace/audioip_lab4
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/.Xil/Vivado-24938-lx19/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 09:51:34 2017...
+ipx::edit_ip_in_project -upgrade true -name Audio_ZED -directory /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp /home/INTRA/esmost/workspace/audioip_lab4/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+ipx::current_core /home/INTRA/esmost/workspace/audioip_lab4/component.xml
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+remove_files /home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio/hdl/audio_testbench.vhd
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+set_property name audio_zed [ipx::current_core]
+set_property display_name audio_zed_v1_0 [ipx::current_core]
+set_property description audio_zed_v1_0 [ipx::current_core]
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+INFO: [Ipptcl 7-560] Setting top module name 'audio_top' for file group 'xilinx_anylanguagebehavioralsimulation'.
+INFO: [Ipptcl 7-560] Setting top module name 'audio_top' for file group 'xilinx_anylanguagesynthesis'.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property previous_version_for_upgrade xilinx.com:user:audio_testbench:1.0 [ipx::current_core]
+set_property core_revision 1 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/Audio_ZED.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 09:53:46 2017...
+set_property  ip_repo_paths  {/home/INTRA/esmost/workspace/audioip_lab4 /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0 /home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio} [current_project]
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'. The path is contained within another repository.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:user:audio_zed:1.0 audio_zed_0
+endgroup
+set_property location {1.5 329 169} [get_bd_cells audio_zed_0]
+startgroup
+create_bd_port -dir O AC_ADR0
+connect_bd_net [get_bd_pins /audio_zed_0/AC_ADR0] [get_bd_ports AC_ADR0]
+endgroup
+startgroup
+create_bd_port -dir O AC_ADR1
+connect_bd_net [get_bd_pins /audio_zed_0/AC_ADR1] [get_bd_ports AC_ADR1]
+endgroup
+startgroup
+create_bd_port -dir O AC_GPIO0
+connect_bd_net [get_bd_pins /audio_zed_0/AC_GPIO0] [get_bd_ports AC_GPIO0]
+endgroup
+startgroup
+create_bd_port -dir I AC_GPIO1
+connect_bd_net [get_bd_pins /audio_zed_0/AC_GPIO1] [get_bd_ports AC_GPIO1]
+endgroup
+startgroup
+create_bd_port -dir I AC_GPIO2
+connect_bd_net [get_bd_pins /audio_zed_0/AC_GPIO2] [get_bd_ports AC_GPIO2]
+endgroup
+startgroup
+create_bd_port -dir I AC_GPIO3
+connect_bd_net [get_bd_pins /audio_zed_0/AC_GPIO3] [get_bd_ports AC_GPIO3]
+endgroup
+startgroup
+create_bd_port -dir O AC_MCLK
+connect_bd_net [get_bd_pins /audio_zed_0/AC_MCLK] [get_bd_ports AC_MCLK]
+endgroup
+startgroup
+create_bd_port -dir O AC_SCK
+connect_bd_net [get_bd_pins /audio_zed_0/AC_SCK] [get_bd_ports AC_SCK]
+endgroup
+startgroup
+create_bd_port -dir IO AC_SDA
+connect_bd_net [get_bd_pins /audio_zed_0/AC_SDA] [get_bd_ports AC_SDA]
+endgroup
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {3 834 459} [get_bd_cells xlconstant_0]
+startgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins audio_zed_0/hphone_l_valid]
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins audio_zed_0/hphone_r_valid_dummy]
+connect_bd_net [get_bd_pins audio_zed_0/hphone_l] [get_bd_pins audio_zed_0/line_in_l]
+connect_bd_net [get_bd_pins audio_zed_0/hphone_r] [get_bd_pins audio_zed_0/line_in_r]
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_r]
+delete_bd_objs [get_bd_nets audio_zed_0_line_in_l]
+connect_bd_net [get_bd_pins audio_zed_0/hphone_l] [get_bd_pins myip_0/Audio_IP_output]
+connect_bd_net [get_bd_pins audio_zed_0/hphone_r] [get_bd_pins myip_0/Audio_IP_output]
+save_bd_design
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+add_files -fileset constrs_1 -norecurse /home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio/constraints/zed_audio.xdc
+open_bd_design {/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd}
+validate_bd_design
+CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. 
+Please check your design and connect them if needed: 
+/audio_zed_0/clk_100
+
+connect_bd_net [get_bd_pins audio_zed_0/clk_100] [get_bd_pins processing_system7_0/FCLK_CLK0]
+validate_bd_design
+regenerate_bd_layout
+save_bd_design
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+launch_runs impl_1 -to_step write_bitstream
+INFO: [BD 41-1662] The design 'Audio.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio.vhd
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio_wrapper.vhd
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+WARNING: [xilinx.com:ip:processing_system7:5.5-1] Audio_processing_system7_0_0: The Zynq BFM requires an AXI BFM license to run. Please ensure that you have purchased and setup the AXI BFM license prior to running simulation with this block. Please contact your Xilinx sales office for more information on purchasing this license
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_zed_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hw_handoff/Audio.hwh
+Generated Block Design Tcl file /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hw_handoff/Audio_bd.tcl
+Generated Hardware Definition File /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio.hwdef
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'. The path is contained within another repository.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+set_property core_revision 4 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+close_project -delete
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project/myip_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 10:13:10 2017...
+update_ip_catalog -rebuild -repo_path /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'
+update_ip_catalog
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'. The path is contained within another repository.
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+ipx::edit_ip_in_project -upgrade true -name myip_v1_0_project -directory /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project /home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/cad/x_16/Vivado/2016.1/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/audioip_lab4'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/INTRA/esmost/workspace/vivado/ip_repo/myip_1.0'.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository '/home/INTRA/esmost/workspace/audioip_lab4/zedboard_audio'. The path is contained within another repository.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+INFO: [IP_Flow 19-793] Syncing display name meta-data
+INFO: [IP_Flow 19-798] Syncing taxonomy meta-data
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+current_project project_Audio
+launch_runs impl_1 -to_step write_bitstream
+CRITICAL WARNING: [filemgmt 20-730] Could not find a top module in the fileset sources_1.
+Resolution: With the gui up, review the source files in the Sources window. Use Add Sources to add any needed sources. If the files are disabled, enable them. You can also select the file and choose Set Used In from the pop-up menu. Review if they are being used at the proper points of the flow.
+ERROR: [Common 17-70] Application Exception: Top module not set for fileset 'sources_1'. Please ensure that a valid value is provided for 'top'. The value for 'top' can be set/changed using the 'Top Module Name' field under 'Project Settings', or using the 'set_property top' Tcl command (e.g. set_property top <name> [current_fileset]).
+current_project myip_v1_0_project
+close_project
+****** Webtalk v2016.1 (64-bit)
+  **** SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+  **** IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+    ** Copyright 1986-2016 Xilinx, Inc. All Rights Reserved.
+
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.tmp/myip_v1_0_project/myip_v1_0_project.hw/webtalk/labtool_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Thu May  4 10:16:11 2017...
+export_ip_user_files -of_objects [get_ips  Audio_myip_0_4] -no_script -reset -quiet
+upgrade_ip -vlnv xilinx.com:user:myip:1.0 [get_ips  Audio_myip_0_4] -log ip_upgrade.log
+Upgrading '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd'
+INFO: [IP_Flow 19-3422] Upgraded Audio_myip_0_4 (myip_v1.0 1.0) from revision 3 to revision 4
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/INTRA/esmost/workspace/vivado/project_Audio/ip_upgrade.log'.
+report_ip_status -name ip_status 
+make_wrapper -files [get_files /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd] -top
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio.vhd
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio_wrapper.vhd
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+add_files -norecurse /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio_wrapper.vhd
+update_compile_order -fileset sources_1
+update_compile_order -fileset sim_1
+launch_runs impl_1 -to_step write_bitstream
+INFO: [BD 41-1662] The design 'Audio.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio.vhd
+VHDL Output written to : /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio_wrapper.vhd
+Wrote  : </home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd> 
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_processing_system7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block myip_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block audio_zed_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hw_handoff/Audio.hwh
+Generated Block Design Tcl file /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hw_handoff/Audio_bd.tcl
+Generated Hardware Definition File /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/hdl/Audio.hwdef
+[Thu May  4 10:16:45 2017] Launched synth_1...
+Run output will be captured here: /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.runs/synth_1/runme.log
+[Thu May  4 10:16:45 2017] Launched impl_1...
+Run output will be captured here: /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.runs/impl_1/runme.log
+file mkdir /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk
+file copy -force /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May  9 12:43:10 2017
+# Process ID: 25391
+# Current directory: /home/INTRA/esmost/workspace/vivado
+# Command line: vivado
+# Log file: /home/INTRA/esmost/workspace/vivado/vivado.log
+# Journal file: /home/INTRA/esmost/workspace/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.xpr
+update_compile_order -fileset sources_1

@@ -1,0 +1,19 @@
+#-----------------------------------------------------------
+# Vivado v2016.1 (64-bit)
+# SW Build 1538259 on Fri Apr  8 15:45:23 MDT 2016
+# IP Build 1537824 on Fri Apr  8 04:28:57 MDT 2016
+# Start of session at: Tue May  9 12:48:01 2017
+# Process ID: 25695
+# Current directory: /home/INTRA/esmost/workspace/project/vivado
+# Command line: vivado
+# Log file: /home/INTRA/esmost/workspace/project/vivado/vivado.log
+# Journal file: /home/INTRA/esmost/workspace/project/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.xpr
+update_compile_order -fileset sources_1
+file copy -force /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.runs/impl_1/Audio_wrapper.sysdef /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+launch_sdk -workspace /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf
+open_bd_design {/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.srcs/sources_1/bd/Audio/Audio.bd}
