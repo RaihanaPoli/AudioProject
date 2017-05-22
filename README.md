@@ -20,11 +20,11 @@
 # Final Designing for the user interface  procedure
   FinalAudioMixer(folder)
 	    $ Driver/devmem
-	        Volume-Filter-Devmem---it is only when we tried to merge all together before separate the both stream (network & line) and it is working properly
-		      ZedboardOLED
-		      Devmem
-          Udpclient
-	        network -- control from network
-	        line -- control from line
+	    Volume-Filter-Devmem---it is only when we tried to merge all together before separate the both stream (network & line) and it is working properly
+	    ZedboardOLED
+	    Devmem
+	    Udpclient
+	    network -- control from network
+	    line -- control from line
 
 
