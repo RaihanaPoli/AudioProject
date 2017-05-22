@@ -15,9 +15,8 @@
 		        VolumeFilter
 		        ZedboardOLED-- print on OLED
 		        Devmem
-            Udpclient
-  
-# Final Designing for the user interface  procedure
+            Udpclient  
+  # Final Designing for the user interface  procedure
   FinalAudioMixer(folder)
 	    $ Driver/devmem
 	    Volume-Filter-Devmem---it is only when we tried to merge all together before separate the both stream (network & line) and it is working properly
