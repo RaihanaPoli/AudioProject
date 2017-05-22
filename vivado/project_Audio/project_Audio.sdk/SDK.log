@@ -1,0 +1,797 @@
+10:22:53 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:22:58 INFO  : XSDB server has started successfully.
+10:22:59 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+10:25:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:25:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:25:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:25:37 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:25:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:25:45 INFO  : 'fpga -state' command is executed.
+10:25:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:25:46 INFO  : Sourcing of '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:25:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:25:46 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:25:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:25:46 INFO  : 'stop' command is executed.
+10:25:47 INFO  : 'ps7_init' command is executed.
+10:25:47 INFO  : 'ps7_post_config' command is executed.
+10:25:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:25:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:25:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:25:48 INFO  : The application '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:25:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+loadhw /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+dow /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+10:25:48 INFO  : Memory regions updated for context APU
+10:25:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:25:48 INFO  : 'con' command is executed.
+10:25:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+con
+----------------End of Script----------------
+
+10:30:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:30:05 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:30:08 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:30:14 INFO  : Disconnected from the channel tcfchan#1.
+10:30:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:30:14 INFO  : 'fpga -state' command is executed.
+10:30:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:30:15 INFO  : Sourcing of '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:30:15 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:30:18 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:30:18 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:30:18 INFO  : 'stop' command is executed.
+10:30:19 INFO  : 'ps7_init' command is executed.
+10:30:19 INFO  : 'ps7_post_config' command is executed.
+10:30:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:20 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:30:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:20 INFO  : The application '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:30:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+loadhw /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+dow /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+10:30:20 INFO  : Memory regions updated for context APU
+10:30:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:30:20 INFO  : 'con' command is executed.
+10:30:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+con
+----------------End of Script----------------
+
+10:33:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:33:44 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:33:51 INFO  : Disconnected from the channel tcfchan#2.
+10:33:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:33:51 INFO  : 'fpga -state' command is executed.
+10:33:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:33:52 INFO  : Sourcing of '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:33:52 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:33:55 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:33:56 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:33:56 INFO  : 'stop' command is executed.
+10:33:56 INFO  : 'ps7_init' command is executed.
+10:33:56 INFO  : 'ps7_post_config' command is executed.
+10:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:57 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:57 INFO  : The application '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:33:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+loadhw /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+dow /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+10:33:57 INFO  : Memory regions updated for context APU
+10:33:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:33:58 INFO  : 'con' command is executed.
+10:33:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+con
+----------------End of Script----------------
+
+10:34:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:34:22 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:34:28 INFO  : Disconnected from the channel tcfchan#3.
+10:34:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248570491" && level==0} -index 1' command is executed.
+10:34:28 INFO  : 'fpga -state' command is executed.
+10:34:28 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:34:29 INFO  : Sourcing of '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:34:29 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:34:33 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:34:33 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0' command is executed.
+10:34:33 INFO  : 'stop' command is executed.
+10:34:34 INFO  : 'ps7_init' command is executed.
+10:34:34 INFO  : 'ps7_post_config' command is executed.
+10:34:34 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:34 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:34:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:35 INFO  : The application '/home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:34:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+loadhw /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+dow /home/INTRA/esmost/workspace/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+10:34:35 INFO  : Memory regions updated for context APU
+10:34:35 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:34:35 INFO  : 'con' command is executed.
+10:34:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248570491"} -index 0
+con
+----------------End of Script----------------
+
+12:59:59 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:00:00 INFO  : XSDB server has started successfully.
+13:00:01 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+13:00:50 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:00:51 INFO  : XSDB server has started successfully.
+13:00:51 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+13:00:51 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+13:09:42 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/INTRA/esmost/workspace/project/sd-image/BOOT.bin
+13:09:42 INFO  : Creating new bif file /home/INTRA/esmost/workspace/project/sd-temp/output.bif
+13:09:42 INFO  : Bootgen command execution is done.
+09:37:34 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:37:35 INFO  : XSDB server has started successfully.
+09:37:43 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+09:37:44 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+09:37:48 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1494484623000,  Project:1493882538000
+09:37:48 INFO  : The hardware specification for project 'Audio_wrapper_hw_platform_1' is different from /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+09:37:53 INFO  : Copied contents of /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf into /Audio_wrapper_hw_platform_1/system.hdf.
+09:38:00 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:38:00 INFO  : Clearing existing target manager status.
+09:38:03 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+09:38:03 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+09:38:11 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 11735 Segmentation fault      "$RDI_PROG" "$@"
+
+09:38:12 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:38:13 INFO  : XSDB server has started successfully.
+09:38:47 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 12376 Segmentation fault      "$RDI_PROG" "$@"
+
+09:38:47 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:38:48 INFO  : XSDB server has started successfully.
+09:38:53 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 12989 Segmentation fault      "$RDI_PROG" "$@"
+
+09:38:53 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:38:54 INFO  : XSDB server has started successfully.
+09:39:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:39:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:39:21 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+09:40:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:40:03 INFO  : 'fpga -state' command is executed.
+09:40:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:40:03 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+09:40:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:40:03 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+09:40:04 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:40:04 INFO  : 'stop' command is executed.
+09:40:04 INFO  : 'ps7_init' command is executed.
+09:40:05 INFO  : 'ps7_post_config' command is executed.
+09:40:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:40:05 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:40:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:40:05 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/linintest/Debug/linintest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:40:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/linintest/Debug/linintest.elf
+----------------End of Script----------------
+
+09:40:05 INFO  : Memory regions updated for context APU
+09:40:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:40:06 INFO  : 'con' command is executed.
+09:40:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+09:40:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:40:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:40:57 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+09:41:07 INFO  : Disconnected from the channel tcfchan#1.
+09:41:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:41:07 INFO  : 'fpga -state' command is executed.
+09:41:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:41:08 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+09:41:08 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:41:11 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+09:41:11 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:41:11 INFO  : 'stop' command is executed.
+09:41:12 INFO  : 'ps7_init' command is executed.
+09:41:12 INFO  : 'ps7_post_config' command is executed.
+09:41:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:41:12 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:41:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:41:13 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/linintest/Debug/linintest.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:41:13 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/linintest/Debug/linintest.elf
+----------------End of Script----------------
+
+09:41:13 INFO  : Memory regions updated for context APU
+09:41:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:41:13 INFO  : 'con' command is executed.
+09:41:13 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+09:44:00 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 253 xsdb eval "disconnect tcfchan#2"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Communication channel is closed by remote peer
+	at org.eclipse.tcf.core.AbstractChannel$1$2.run(AbstractChannel.java:305)
+	... 2 more
+09:44:03 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+09:44:18 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:44:19 INFO  : XSDB server has started successfully.
+09:44:19 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+09:44:19 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+09:45:50 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:45:51 INFO  : XSDB server has started successfully.
+09:45:57 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+09:45:57 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+09:46:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:46:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:46:36 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+09:46:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:46:58 INFO  : 'fpga -state' command is executed.
+09:46:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:46:59 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+09:46:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:46:59 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+09:47:00 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:47:00 INFO  : 'stop' command is executed.
+09:47:00 INFO  : 'ps7_init' command is executed.
+09:47:00 INFO  : 'ps7_post_config' command is executed.
+09:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:47:01 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:47:01 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:47:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+09:47:01 INFO  : Memory regions updated for context APU
+09:47:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:47:01 INFO  : 'con' command is executed.
+09:47:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+09:52:22 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:52:23 INFO  : XSDB server has started successfully.
+09:52:24 WARN  : channel "tcfchan#1" closed
+09:53:28 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:53:29 INFO  : XSDB server has started successfully.
+09:53:30 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+09:53:30 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+09:53:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:53:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:54:00 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+09:54:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+09:54:08 INFO  : 'fpga -state' command is executed.
+09:54:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:54:09 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+09:54:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:54:09 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+09:54:09 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+09:54:09 INFO  : 'stop' command is executed.
+09:54:10 INFO  : 'ps7_init' command is executed.
+09:54:10 INFO  : 'ps7_post_config' command is executed.
+09:54:10 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:10 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+09:54:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:11 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:54:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_test/Debug/Audio_test.elf
+----------------End of Script----------------
+
+09:54:11 INFO  : Memory regions updated for context APU
+09:54:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:54:11 INFO  : 'con' command is executed.
+09:54:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+09:59:24 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+09:59:25 INFO  : XSDB server has started successfully.
+09:59:25 WARN  : channel "tcfchan#1" closed
+10:05:47 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:05:48 INFO  : XSDB server has started successfully.
+10:05:49 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+10:05:49 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_1.
+10:05:56 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1494486322000,  Project:1494484623000
+10:05:56 INFO  : The hardware specification for project 'Audio_wrapper_hw_platform_1' is different from /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+10:05:56 INFO  : Copied contents of /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf into /Audio_wrapper_hw_platform_1/system.hdf.
+10:06:03 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:06:03 INFO  : Clearing existing target manager status.
+10:06:05 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:06:05 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+10:06:25 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 20364 Segmentation fault      "$RDI_PROG" "$@"
+
+10:06:25 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:06:26 INFO  : XSDB server has started successfully.
+10:07:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:07:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:07:39 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:07:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:07:45 INFO  : 'fpga -state' command is executed.
+10:07:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:07:46 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:07:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:07:46 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:07:46 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:07:47 INFO  : 'stop' command is executed.
+10:07:47 INFO  : 'ps7_init' command is executed.
+10:07:47 INFO  : 'ps7_post_config' command is executed.
+10:07:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:07:48 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:07:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:07:48 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:07:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf
+----------------End of Script----------------
+
+10:07:48 INFO  : Memory regions updated for context APU
+10:07:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:07:48 INFO  : 'con' command is executed.
+10:07:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+10:07:58 INFO  : Disconnected from the channel tcfchan#1.
+10:07:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:07:58 INFO  : 'fpga -state' command is executed.
+10:07:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:07:59 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:07:59 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:08:03 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:08:03 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:08:03 INFO  : 'stop' command is executed.
+10:08:04 INFO  : 'ps7_init' command is executed.
+10:08:04 INFO  : 'ps7_post_config' command is executed.
+10:08:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:08:04 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:08:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:08:05 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:08:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf
+----------------End of Script----------------
+
+10:08:05 INFO  : Memory regions updated for context APU
+10:08:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:08:05 INFO  : 'con' command is executed.
+10:08:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+10:09:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:13 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:09:13 ERROR : ftdi_transfer_data_done failed: all fine
+10:09:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:09:28 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:09:43 INFO  : Disconnected from the channel tcfchan#2.
+10:09:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:09:44 INFO  : 'fpga -state' command is executed.
+10:09:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:09:44 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:09:45 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:09:48 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:09:48 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:09:49 INFO  : 'stop' command is executed.
+10:09:49 INFO  : 'ps7_init' command is executed.
+10:09:49 INFO  : 'ps7_post_config' command is executed.
+10:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:50 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:50 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:09:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf
+----------------End of Script----------------
+
+10:09:50 INFO  : Memory regions updated for context APU
+10:09:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:09:50 INFO  : 'con' command is executed.
+10:09:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+10:20:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:20:16 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:20:22 INFO  : Disconnected from the channel tcfchan#3.
+10:20:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:20:23 INFO  : 'fpga -state' command is executed.
+10:20:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:23 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:20:24 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:20:27 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:20:27 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:20:27 INFO  : 'stop' command is executed.
+10:20:28 INFO  : 'ps7_init' command is executed.
+10:20:28 INFO  : 'ps7_post_config' command is executed.
+10:20:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:28 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:20:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:29 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:20:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf
+----------------End of Script----------------
+
+10:20:29 INFO  : Memory regions updated for context APU
+10:20:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:29 INFO  : 'con' command is executed.
+10:20:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+10:22:34 ERROR : Failed to closehw "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_1/system.hdf"
+Reason: Cannot close hw design '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_1/system.hdf'.
+Design is not opened in the current session.
+
+10:22:43 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:22:44 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:22:44 INFO  : XSDB server has started successfully.
+10:23:06 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:23:07 INFO  : XSDB server has started successfully.
+10:23:08 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+10:24:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:24:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:24:05 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+10:24:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+10:24:12 INFO  : 'fpga -state' command is executed.
+10:24:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:24:13 INFO  : Sourcing of '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl' is done.
+10:24:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:24:13 INFO  : Hardware design information is loaded from '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf'.
+10:24:13 INFO  : 'targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0' command is executed.
+10:24:14 INFO  : 'stop' command is executed.
+10:24:14 INFO  : 'ps7_init' command is executed.
+10:24:14 INFO  : 'ps7_post_config' command is executed.
+10:24:14 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:15 INFO  : Processor reset is completed for 'ps7_cortexa9_0'.
+10:24:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:15 INFO  : The application '/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:24:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/ps7_init.tcl
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+loadhw /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/system.hdf
+targets -set -filter {name =~"APU" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+stop
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+rst -processor
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+dow /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/hello/Debug/hello.elf
+----------------End of Script----------------
+
+10:24:15 INFO  : Memory regions updated for context APU
+10:24:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:24:15 INFO  : 'con' command is executed.
+10:24:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent Zed 210248518615"} -index 0
+con
+----------------End of Script----------------
+
+10:46:12 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1494488756000,  Project:1494486322000
+10:46:12 INFO  : Project Audio_wrapper_hw_platform_0's source hardware specification located at /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+10:46:43 INFO  : Copied contents of /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf into /Audio_wrapper_hw_platform_0/system.hdf.
+10:46:49 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+10:46:51 INFO  : 
+10:46:52 INFO  : 
+10:46:53 INFO  : Updating hardware inferred compiler options for Audio_test.
+10:46:54 INFO  : Updating hardware inferred compiler options for hello.
+10:46:54 INFO  : Clearing existing target manager status.
+10:46:57 INFO  : Closing and re-opening the MSS file of ther project Audio_test_bsp
+10:46:58 INFO  : Closing and re-opening the MSS file of ther project hello_bsp
+10:46:59 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+10:47:08 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+10:47:30 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 23570 Segmentation fault      "$RDI_PROG" "$@"
+
+10:47:30 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:47:31 INFO  : XSDB server has started successfully.
+10:48:46 WARN  : Unexpected exception occurred.
+java.io.IOException: Command [C 220 xsdb eval "disconnect tcfchan#1"] aborted
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:753)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:95)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Communication channel is closed by remote peer
+	at org.eclipse.tcf.core.AbstractChannel$1$2.run(AbstractChannel.java:305)
+	... 2 more
+10:48:48 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+10:49:01 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:49:02 INFO  : XSDB server has started successfully.
+10:49:09 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+10:49:09 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_0.
+10:49:52 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 30408 Segmentation fault      "$RDI_PROG" "$@"
+
+10:49:52 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+10:49:53 INFO  : XSDB server has started successfully.
+10:56:56 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/INTRA/esmost/workspace/project/sd-image/BOOT.bin
+10:56:56 INFO  : Creating new bif file /home/INTRA/esmost/workspace/project/sd-temp/output.bif
+10:56:57 INFO  : Bootgen command execution is done.
+13:00:46 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1494496827000,  Project:1494488756000
+13:00:46 INFO  : Project Audio_wrapper_hw_platform_0's source hardware specification located at /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:00:50 INFO  : Copied contents of /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf into /Audio_wrapper_hw_platform_0/system.hdf.
+13:00:57 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:00:58 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/.esd-112"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-ueVwDNgB1BSe"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/orbit-gdm"
+
+13:00:58 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+13:00:58 ERROR : Error updating BSP project MSS files.
+13:00:59 INFO  : Updating hardware inferred compiler options for Audio_test.
+13:01:00 INFO  : Updating hardware inferred compiler options for FSBL.
+13:01:01 INFO  : Updating hardware inferred compiler options for hello.
+13:01:01 INFO  : Clearing existing target manager status.
+13:01:26 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+13:02:38 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:02:39 INFO  : XSDB server has started successfully.
+13:02:46 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+13:02:47 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_0.
+13:03:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:06:49 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 27557 Segmentation fault      "$RDI_PROG" "$@"
+
+13:06:49 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:06:50 INFO  : XSDB server has started successfully.
+13:07:24 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 27808 Segmentation fault      "$RDI_PROG" "$@"
+
+13:07:24 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:07:25 INFO  : XSDB server has started successfully.
+13:07:30 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 27889 Segmentation fault      "$RDI_PROG" "$@"
+
+13:07:30 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:07:31 INFO  : XSDB server has started successfully.
+13:07:56 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:07:57 INFO  : XSDB server has started successfully.
+13:07:58 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+13:07:58 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_0.
+13:08:34 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 28124 Segmentation fault      "$RDI_PROG" "$@"
+
+13:08:34 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:08:35 INFO  : XSDB server has started successfully.
+13:09:31 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 28203 Segmentation fault      "$RDI_PROG" "$@"
+
+13:09:31 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:09:32 INFO  : XSDB server has started successfully.
+13:11:20 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 29288 Segmentation fault      "$RDI_PROG" "$@"
+
+13:11:20 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:11:21 INFO  : XSDB server has started successfully.
+13:11:26 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 30032 Segmentation fault      "$RDI_PROG" "$@"
+
+13:11:26 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:11:27 INFO  : XSDB server has started successfully.
+13:13:28 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 30094 Segmentation fault      "$RDI_PROG" "$@"
+
+13:13:28 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:13:29 INFO  : XSDB server has started successfully.
+13:17:12 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 31004 Segmentation fault      "$RDI_PROG" "$@"
+
+13:17:12 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:17:13 INFO  : XSDB server has started successfully.
+13:27:19 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 31795 Segmentation fault      "$RDI_PROG" "$@"
+
+13:27:19 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:27:20 INFO  : XSDB server has started successfully.
+13:27:25 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:   382 Segmentation fault      "$RDI_PROG" "$@"
+
+13:27:25 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:27:26 INFO  : XSDB server has started successfully.
+13:30:53 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:   444 Segmentation fault      "$RDI_PROG" "$@"
+
+13:30:53 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:30:54 INFO  : XSDB server has started successfully.
+13:32:40 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  1462 Segmentation fault      "$RDI_PROG" "$@"
+
+13:32:40 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:32:41 INFO  : XSDB server has started successfully.
+13:34:46 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/INTRA/esmost/workspace/project/sd-image/BOOT.bin
+13:34:46 INFO  : Creating new bif file /home/INTRA/esmost/workspace/project/sd-temp/output.bif
+13:34:46 INFO  : Bootgen command execution is done.
+13:44:58 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  2449 Segmentation fault      "$RDI_PROG" "$@"
+
+13:44:58 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:44:59 INFO  : XSDB server has started successfully.
+13:45:04 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  3951 Segmentation fault      "$RDI_PROG" "$@"
+
+13:45:04 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+13:45:05 INFO  : XSDB server has started successfully.
+13:45:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:45:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zed 210248518615" && level==0} -index 1' command is executed.
+13:45:47 INFO  : FPGA configured successfully with bitstream "/home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper_hw_platform_0/Audio_wrapper.bit"
+14:13:57 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:13:58 INFO  : XSDB server has started successfully.
+14:14:04 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+14:14:05 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_0.
+14:15:07 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  5704 Segmentation fault      "$RDI_PROG" "$@"
+
+14:15:07 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:15:08 INFO  : XSDB server has started successfully.
+14:16:17 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  5870 Segmentation fault      "$RDI_PROG" "$@"
+
+14:16:17 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:16:18 INFO  : XSDB server has started successfully.
+14:16:23 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164:  5954 Segmentation fault      "$RDI_PROG" "$@"
+
+14:16:23 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:16:24 INFO  : XSDB server has started successfully.
+14:18:53 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/INTRA/esmost/workspace/project/sd-image/BOOT.bin
+14:18:53 INFO  : Creating new bif file /home/INTRA/esmost/workspace/project/sd-temp/output.bif
+14:18:53 INFO  : Bootgen command execution is done.
+14:47:58 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1494503251000,  Project:1494496827000
+14:47:58 INFO  : Project Audio_wrapper_hw_platform_0's source hardware specification located at /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+14:48:00 INFO  : Copied contents of /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf into /Audio_wrapper_hw_platform_0/system.hdf.
+14:48:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+14:48:08 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/.esd-112"
+
+14:48:08 ERROR : (XSDB Server)ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/pulse-ueVwDNgB1BSe"
+ERROR: [Hsi 55-1433] Error boost::filesystem::directory_iterator::construct: Permission denied: "/tmp/orbit-gdm"
+
+14:48:08 ERROR : Failed to call sync_sw_with_hw_change
+Reason: ERROR: [Common 17-39] 'hsi::open_sw_design' failed due to earlier errors.
+
+14:48:08 ERROR : Error updating BSP project MSS files.
+14:48:09 INFO  : Updating hardware inferred compiler options for Audio_test.
+14:48:09 INFO  : Updating hardware inferred compiler options for FSBL.
+14:48:10 INFO  : Updating hardware inferred compiler options for hello.
+14:48:11 INFO  : Updating hardware inferred compiler options for testlinin.
+14:48:11 INFO  : Clearing existing target manager status.
+14:48:31 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+14:48:46 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:48:47 INFO  : XSDB server has started successfully.
+14:48:55 INFO  : Processing command line option -hwspec /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/Audio_wrapper.hdf.
+14:48:55 INFO  : Checking for hwspec changes in the project Audio_wrapper_hw_platform_0.
+14:50:09 ERROR : (XSDB Server)/cad/x_16/SDK/2016.1/bin/loader: line 164: 12493 Segmentation fault      "$RDI_PROG" "$@"
+
+14:50:09 INFO  : Launching XSDB server: xsdb -n -interactive /home/INTRA/esmost/workspace/project/vivado/project_Audio/project_Audio.sdk/temp_xsdb_launch_script.tcl
+14:50:10 INFO  : XSDB server has started successfully.
+14:52:12 INFO  : Invoking Bootgen: bootgen -image output.bif -arch zynq -o /home/INTRA/esmost/workspace/project/sd-image/BOOT.bin -w on
+14:52:12 INFO  : Overwriting existing bif file /home/INTRA/esmost/workspace/project/sd-temp/output.bif
+14:52:13 INFO  : Bootgen command execution is done.
